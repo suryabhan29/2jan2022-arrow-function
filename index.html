@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Arrow functions</title>
+        <script>
+            // before the closing of head tag
+        </script>
+    </head>
+    <body>
+        <script src="./js/script.js"></script>
+        <script>
+            // before the closing of body tag
+            // standalone
+            // Lets define a function with old way
+
+            //1.Function defination
+            function myFunction1(x){     //camal case   //x is a formal argument
+                alert('Hello '+x+' form my function1')
+            }
+            //2.Function calling/invocation
+            myFunction1(`suryabhan`);   //Actual arrguments
+
+            // Lets define a function with new way (es-6 [2015])
+
+            let myFunction2 = (y)=>{     //camal case   //y is a formal argument
+                alert(`Hello ${y} form my function2`);
+            }
+            //2.Function calling
+            myFunction2('Anil');     //Actual arrguments
+        </script>
+        <script>
+            //2. Js object
+            let student1 = {     // object
+                //1. p:v
+                name:'vishnu',
+                surname:'jat',
+                
+                
+                
+                //2. Methods
+                //2.1 Method defination
+                displayFullName(){
+                    alert(`Hello ${this.name} ${this.surname} how are you`)
+                },
+                display(name="payal"){   // name is a formal argument with default value
+                    alert(`Hello ${name} , good morning`)
+                },
+                display2: (name2)=>{  // fat arrow
+                    alert(`Hello ${name2}, good morning `)
+                }
+            };
+            //2 function calling
+                student1.displayFullName();
+                student1.display2('sakshi ');   // actual argument
+        </script>
+        <script>
+            // pascalcase
+            
+            class MyClass{    //pascal case
+                //1. properties/variables
+                student2name="rahul";  // define and intizilation
+                student2surname;
+
+
+                //2. constructor
+                constructor(sname){
+                    this.student2surname = sname;
+                }
+                //3. method
+                // method defination
+                 myFunction3(){
+                alert(`Hello ${this.student2name} ${this.student2surname} , how are you`)
+                }
+                myFunction4=()=>{  // that is called fat arrow notation
+                alert(`Hello ${this.student2name} ${this.student2surname} , how are you`)   
+                }
+            }
+            // let object = new className();
+            //object.method
+            // calling
+            let object2 = new MyClass('sharma');
+            object2.myFunction3()
+            object2.myFunction4()
+
+        </script>
+    </body>
+</html>
